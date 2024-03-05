@@ -1,0 +1,79 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+body{
+    background-color: rgb(208, 208, 122);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem  ;
+    border-radius: 20px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+form{
+    margin: 2rem 0rem 1rem 0rem ;
+}
+
+form,button,select,input{
+    width: 100%;
+    border-style: none;
+    outline: none;
+}
+.amount p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form button{
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    margin-top: 2rem;
+    height: 3rem;
+    background-color: violet;
+    cursor: pointer;
+}
+form input{
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+.container-converter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.self-container img{
+    height: 30px;
+}
+.self-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.75px solid gray;
+    height: 2.5rem;
+    border-radius: 10px;
+    width: 5rem;
+}
+.rate p{
+    margin-top: 1rem;
+}
+.container-converter i{
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
