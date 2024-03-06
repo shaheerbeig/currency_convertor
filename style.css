@@ -66,6 +66,7 @@ form input{
     height: 2.5rem;
     border-radius: 10px;
     width: 5rem;
+    padding-left: 1rem;
 }
 .rate p{
     margin-top: 1rem;

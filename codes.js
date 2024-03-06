@@ -1,5 +1,5 @@
 //this is an object that store the country and its country code
-const countryList = {
+export const countryList = {
     AED: "AE",
     AFN: "AF",
     XCD: "AG",
