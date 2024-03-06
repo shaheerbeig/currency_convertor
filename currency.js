@@ -1,6 +1,4 @@
 import {countryList} from "../codes.js";
-
-
 let countryCodes = Object.keys(countryList);
 let dropdowns = document.querySelectorAll(".container-converter select");
 
@@ -42,7 +40,7 @@ const changeflag = (event) => {
 let convertbtn = document.querySelector("button");
 
 //extracting the input value when the convert button is clicked
-convertbtn.addEventListener('click', (evt) => {
+convertbtn.addEventListener('click',async (evt) => {
     evt.preventDefault();
     let amountvalue = document.querySelector(".amount input");
     if(amountvalue.value < 1 || amountvalue.value === "" ){
@@ -50,8 +48,29 @@ convertbtn.addEventListener('click', (evt) => {
         amountvalue.value = "1";
     }
 
-    
+    let countryTo = document.querySelector(".to select");
+     let countryFrom = document.querySelector(".from select");
+     
+     const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${countryFrom.value.toLowerCase()}.json`);
+     const responseData = await response.json();
+     console.log(responseData);
+     const rate = await responseData[countryFrom.value.toLowerCase()][countryTo.value.toLowerCase()];
+     console.log(rate);
+
+     let totalvalue = amountvalue.value * rate;
+     console.log(totalvalue);
+
+     let rateExchange = document.querySelector(".js-rate");
+     rateExchange.innerHTML = `1 ${countryFrom.value} = ${rate} ${countryTo.value}`
+
+     let totalamount = document.querySelector(".js-total-amount");
+     totalamount.innerHTML = `The Total Value Converted is ${totalvalue}.`
+     console.log(rateExchange);
+
 });
+
+
+
 
 
   
