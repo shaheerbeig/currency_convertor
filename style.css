@@ -78,3 +78,8 @@ form input{
     align-items: center;
     justify-content: center;
 }
+
+.js-rate{
+    margin-top: 1rem;
+    font-size: 17px;
+}

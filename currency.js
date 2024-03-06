@@ -53,19 +53,14 @@ convertbtn.addEventListener('click',async (evt) => {
      
      const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${countryFrom.value.toLowerCase()}.json`);
      const responseData = await response.json();
-     console.log(responseData);
+
      const rate = await responseData[countryFrom.value.toLowerCase()][countryTo.value.toLowerCase()];
-     console.log(rate);
+     
 
      let totalvalue = amountvalue.value * rate;
-     console.log(totalvalue);
 
      let rateExchange = document.querySelector(".js-rate");
-     rateExchange.innerHTML = `1 ${countryFrom.value} = ${rate} ${countryTo.value}`
-
-     let totalamount = document.querySelector(".js-total-amount");
-     totalamount.innerHTML = `The Total Value Converted is ${totalvalue}.`
-     console.log(rateExchange);
+     rateExchange.innerHTML = `${amountvalue.value} ${countryFrom.value} = ${(totalvalue).toFixed(4)} ${countryTo.value}`
 
 });
 
