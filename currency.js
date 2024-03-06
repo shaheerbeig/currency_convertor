@@ -55,7 +55,7 @@ convertbtn.addEventListener('click',async (evt) => {
      const responseData = await response.json();
 
      const rate = await responseData[countryFrom.value.toLowerCase()][countryTo.value.toLowerCase()];
-     
+
 
      let totalvalue = amountvalue.value * rate;
 
