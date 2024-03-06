@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 .container{
-    height: 50vh;
+    height: 60vh;
     background-color: rgb(255, 255, 255);
     padding: 2rem  ;
     border-radius: 20px;
@@ -82,4 +82,31 @@ form input{
 .js-rate{
     margin-top: 1rem;
     font-size: 17px;
+}
+
+@media (max-width:300px){
+.container{
+    height: 60vh;
+    padding: 2rem;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.25rem
+}
+.amount p{
+    font-size: 15px;
+}
+form input{
+    border: 1px solid gray;
+    font-size: 14px;
+    margin-top: 0.75rem;
+}
+.self-container{
+    height: 2rem;
+    width: 4.5rem;
+    padding-left: 0.5rem;
+    font-size: 14px;
+}
 }
